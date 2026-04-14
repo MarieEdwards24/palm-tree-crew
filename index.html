@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palm Tree Crew — Brand Director Case Study</title>
+<style>
+  @font-face {
+    font-family: "Trade Gothic Bold";
+    font-weight: 700;
+    font-display: swap;
+    src: url("https://palmtreecrew.com/fonts/TradeGothic-BoldCondTwenty.10a814e9.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Helvetica Neue";
+    font-weight: 500;
+    font-display: swap;
+    src: url("https://palmtreecrew.com/fonts/HelveticaNeue-Medium.d28e80e0.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Helvetica Neue";
+    font-weight: 700;
+    font-display: swap;
+    src: url("https://palmtreecrew.com/fonts/HelveticaNeue-Bold.2e104027.woff2") format("woff2");
+  }
+</style>
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --green: #2D5A45;
+    --green-light: #3D7A5F;
+    --green-pale: #E8EDE8;
+    --blue: #B8D8DC;
+    --blue-dark: #7AABB0;
+    --gold: #B8966A;
+    --gold-light: #E8D4B4;
+    --black: #141414;
+    --gray: #6B6B60;
+    --gray-light: #9A9A8E;
+    --white: #FFFFFF;
+    --nav-width: 260px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: var(--cream);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    background: var(--green);
+    overflow-y: auto;
+    z-index: 100;
+    padding: 32px 0 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav::-webkit-scrollbar { width: 4px; }
+  nav::-webkit-scrollbar-track { background: transparent; }
+  nav::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+
+  .nav-logo {
+    padding: 0 24px 28px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    margin-bottom: 20px;
+  }
+
+  .nav-logo-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo-palm {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-text {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 13px;
+    color: var(--gold-light);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-author {
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    padding: 0 24px;
+    margin-bottom: 24px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .nav-section-group {
+    margin-bottom: 4px;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 8px 24px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+    border-left: 2px solid transparent;
+    line-height: 1.4;
+  }
+
+  .nav-link:hover {
+    color: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,0.06);
+  }
+
+  .nav-link.active {
+    color: var(--gold-light);
+    border-left-color: var(--gold);
+    background: rgba(255,255,255,0.06);
+    font-weight: 500;
+  }
+
+  .nav-link.parent {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    padding-top: 16px;
+    padding-bottom: 4px;
+    cursor: default;
+    border-left: none;
+  }
+
+  .nav-link.parent:hover {
+    background: transparent;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .nav-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 12px 24px;
+  }
+
+  /* ── MAIN ── */
+  main {
+    margin-left: var(--nav-width);
+    min-height: 100vh;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--green);
+    padding: 80px 72px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle at center, rgba(184,150,106,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: clamp(36px, 5vw, 58px);
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 16px;
+    max-width: 620px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+    margin-bottom: 36px;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-quote {
+    display: inline-block;
+    border: 1px solid rgba(184,150,106,0.35);
+    border-radius: 8px;
+    padding: 18px 24px;
+    max-width: 540px;
+    background: rgba(184,150,106,0.08);
+  }
+
+  .hero-quote p {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--gold-light);
+    line-height: 1.5;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 72px 72px 56px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  .section-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 12px;
+    opacity: 0.7;
+  }
+
+  .section-headline {
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: clamp(22px, 3vw, 30px);
+    color: var(--green);
+    line-height: 1.2;
+    margin-bottom: 40px;
+    max-width: 680px;
+  }
+
+  /* ── CONTENT CARDS ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  .card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    border: 1px solid rgba(0,0,0,0.06);
+    position: relative;
+  }
+
+  .card-accent {
+    width: 32px;
+    height: 3px;
+    background: var(--green);
+    border-radius: 2px;
+    margin-bottom: 14px;
+  }
+
+  .card-accent.gold { background: var(--gold); }
+  .card-accent.blue { background: var(--blue-dark); }
+
+  .card-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 20px;
+    color: var(--green);
+    margin-bottom: 14px;
+    line-height: 1.25;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .card ul li {
+    font-size: 14px;
+    color: var(--black);
+    line-height: 1.6;
+    padding: 5px 0 5px 16px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-weight: 400;
+  }
+
+  .card ul li:last-child { border-bottom: none; }
+
+  .card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--green);
+    opacity: 0.5;
+  }
+
+  .card ul li.bold { font-weight: 600; }
+
+  /* ── FULL-WIDTH CARD ── */
+  .card-full {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 32px 36px;
+    border: 1px solid rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+  }
+
+  .card-full .card-label {
+    margin-bottom: 8px;
+  }
+
+  .card-full .card-title {
+    margin-bottom: 20px;
+  }
+
+  .card-full ul {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    column-gap: 40px;
+  }
+
+  .card-full ul li {
+    font-size: 14px;
+    color: var(--black);
+    line-height: 1.6;
+    padding: 5px 0 5px 16px;
+    position: relative;
+    break-inside: avoid;
+  }
+
+  .card-full ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--green);
+    opacity: 0.5;
+  }
+
+  /* ── PHASE CARDS (First 90 Days) ── */
+  .phase-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .phase-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .phase-number {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 36px;
+    color: var(--green);
+    opacity: 0.15;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .phase-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 14px;
+  }
+
+  .phase-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .phase-card ul li {
+    font-size: 13.5px;
+    color: var(--black);
+    line-height: 1.6;
+    padding: 5px 0 5px 14px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .phase-card ul li:last-child { border-bottom: none; }
+
+  .phase-card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* ── QUOTE BOX ── */
+  .quote-box {
+    background: var(--green-pale);
+    border: 1px solid rgba(45,90,69,0.18);
+    border-left: 4px solid var(--green);
+    border-radius: 0 10px 10px 0;
+    padding: 22px 28px;
+    margin: 28px 0;
+  }
+
+  .quote-box p {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--green);
+    line-height: 1.5;
+  }
+
+  .quote-box.gold {
+    background: rgba(184,150,106,0.08);
+    border-left-color: var(--gold);
+    border-color: rgba(184,150,106,0.2);
+  }
+
+  .quote-box.gold p { color: var(--black); }
+
+  .quote-box.blue {
+    background: rgba(184,216,220,0.2);
+    border-left-color: var(--blue-dark);
+    border-color: rgba(184,216,220,0.4);
+  }
+
+  /* ── PILLAR CARDS ── */
+  .pillar-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .pillar-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 24px;
+    border: 1px solid rgba(0,0,0,0.06);
+    text-align: left;
+  }
+
+  .pillar-card.green { background: var(--green); }
+  .pillar-card.blue { background: var(--blue); }
+  .pillar-card.gold-bg { background: rgba(184,150,106,0.1); }
+
+  .pillar-name {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .pillar-card.green .pillar-name { color: var(--gold-light); }
+  .pillar-card.blue .pillar-name { color: var(--green); }
+
+  .pillar-card-title {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 20px;
+    color: var(--green);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .pillar-card.green .pillar-card-title { color: var(--white); }
+  .pillar-card.blue .pillar-card-title { color: var(--green); }
+
+  .pillar-card p {
+    font-size: 13.5px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  .pillar-card.green p { color: rgba(255,255,255,0.75); }
+
+  /* ── STAT STRIP ── */
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(0,0,0,0.06);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 28px 0;
+  }
+
+  .stat-cell {
+    background: var(--white);
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 28px;
+    color: var(--green);
+    display: block;
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.4;
+  }
+
+  /* ── BRAND REFS ── */
+  .brand-ref-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .brand-ref {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .brand-ref-accent {
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+  }
+
+  .brand-ref-name {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 4px;
+  }
+
+  .brand-ref-role {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 17px;
+    color: var(--green);
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+
+  .brand-ref-desc {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .brand-ref-stat {
+    font-size: 12px;
+    color: var(--green);
+    font-weight: 500;
+    background: var(--green-pale);
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+  }
+
+  /* ── ALLOCATION ── */
+  .alloc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .alloc-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid rgba(0,0,0,0.06);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .alloc-card::before {
+    content: attr(data-pct);
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 44px;
+    color: var(--green);
+    opacity: 0.07;
+    line-height: 1;
+  }
+
+  .alloc-pct {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 32px;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .alloc-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 16px;
+  }
+
+  .alloc-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .alloc-card ul li {
+    font-size: 13.5px;
+    color: var(--black);
+    line-height: 1.6;
+    padding: 5px 0 5px 14px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .alloc-card ul li:last-child { border-bottom: none; }
+
+  .alloc-card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--green);
+    opacity: 0.5;
+  }
+
+  /* ── CLOSING ── */
+  .closing-section {
+    background: var(--green);
+    padding: 80px 72px;
+  }
+
+  .closing-section .section-headline {
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    max-width: 560px;
+  }
+
+  .closing-section .section-eyebrow { color: var(--gold); opacity: 1; }
+
+  .closing-body {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    max-width: 560px;
+    margin-bottom: 12px;
+    font-weight: 300;
+  }
+
+  .closing-body.bold {
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+  /* ── APPENDIX ── */
+  .appendix-section {
+    background: var(--cream);
+    padding: 72px 72px 80px;
+    border-top: 2px solid rgba(0,0,0,0.08);
+  }
+
+  .appendix-entry {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .appendix-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .appendix-brand {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 22px;
+    color: var(--green);
+    margin-bottom: 6px;
+  }
+
+  .appendix-role {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .appendix-body {
+    font-size: 14.5px;
+    color: var(--black);
+    line-height: 1.75;
+    max-width: 720px;
+    margin-bottom: 12px;
+  }
+
+  .appendix-extract {
+    background: var(--green-pale);
+    border-left: 3px solid var(--green);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin-top: 16px;
+    max-width: 720px;
+  }
+
+  .appendix-extract-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 6px;
+  }
+
+  .appendix-extract p {
+    font-size: 13.5px;
+    color: var(--black);
+    line-height: 1.65;
+  }
+
+  /* ── CONTENT MOMENTS ── */
+  .moment-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .moment-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .moment-timing {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--blue-dark);
+    margin-bottom: 6px;
+  }
+
+  .moment-title {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 18px;
+    color: var(--green);
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+
+  .moment-desc {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* ── INLINE LIST ── */
+  .content-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 28px;
+  }
+
+  .content-list li {
+    font-size: 15px;
+    color: var(--black);
+    line-height: 1.65;
+    padding: 8px 0 8px 20px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .content-list li:last-child { border-bottom: none; }
+
+  .content-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    opacity: 0.4;
+  }
+
+  .content-list li.bold { font-weight: 600; }
+
+  /* ── MASLOW VIZ ── */
+  .maslow-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .maslow-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .maslow-num {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 32px;
+    color: var(--green);
+    opacity: 0.2;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: -4px;
+  }
+
+  .maslow-level {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 4px;
+  }
+
+  .maslow-desc { font-size: 13.5px; color: var(--gray); line-height: 1.5; }
+
+  .maslow-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-top: 8px;
+  }
+
+  .maslow-badge.marg { background: rgba(184,150,106,0.15); color: var(--gold); }
+  .maslow-badge.ptc { background: var(--green-pale); color: var(--green); }
+
+  /* ── CHANGE CARDS ── */
+  .change-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .change-item {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 32px;
+    border: 1px solid rgba(0,0,0,0.06);
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .change-num {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 42px;
+    color: var(--green);
+    opacity: 0.12;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .change-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 12px;
+  }
+
+  .change-item ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .change-item ul li {
+    font-size: 14px;
+    color: var(--black);
+    line-height: 1.65;
+    padding: 5px 0 5px 14px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .change-item ul li:last-child { border-bottom: none; }
+
+  .change-item ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* ── COLLAB TIMELINE ── */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 28px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .timeline-item {
+    background: var(--white);
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 20px;
+    align-items: start;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .timeline-item:last-child { border-bottom: none; }
+
+  .timeline-year {
+    font-family: 'Trade Gothic Bold', sans-serif;
+    font-size: 22px;
+    color: var(--green);
+    line-height: 1.2;
+  }
+
+  .timeline-year span {
+    display: block;
+    font-size: 10px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2px;
+  }
+
+  .timeline-content-title {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+
+  .timeline-content-desc {
+    font-size: 13.5px;
+    color: var(--gray);
+    line-height: 1.55;
+  }
+
+  /* ── BLUE ACCENT SECTION ── */
+  .blue-section {
+    background: var(--blue);
+    padding: 40px 48px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+  }
+
+  .blue-section .section-eyebrow { color: var(--green); }
+  .blue-section .section-headline {
+    text-transform: uppercase;
+    letter-spacing: -0.02em; color: var(--green); font-size: 22px; margin-bottom: 20px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    :root { --nav-width: 220px; }
+    section, .hero, .closing-section, .appendix-section { padding-left: 40px; padding-right: 40px; }
+    .card-grid, .pillar-row, .brand-ref-grid, .alloc-grid, .phase-grid { grid-template-columns: 1fr; }
+    .stat-strip { grid-template-columns: repeat(2,1fr); }
+    .moment-row { grid-template-columns: 1fr; }
+    .maslow-grid { grid-template-columns: 1fr; }
+    .card-full ul { columns: 1; }
+  }
+
+  @media (max-width: 640px) {
+    main { margin-left: 0; }
+    nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="sidebar">
+  <div class="nav-logo">
+    <a href="#hero" class="nav-logo-mark">
+      <svg class="nav-logo-palm" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="18" cy="18" r="18" fill="rgba(255,255,255,0.08)"/>
+        <path d="M18 28V18" stroke="#B8966A" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M18 18C18 18 14 14 10 15C10 15 13 19 18 18Z" fill="#B8966A" opacity="0.9"/>
+        <path d="M18 18C18 18 22 13 26 14C26 14 24 19 18 18Z" fill="#B8966A" opacity="0.75"/>
+        <path d="M18 18C18 18 16 13 14 10C14 10 19 11 18 18Z" fill="#B8966A" opacity="0.6"/>
+        <path d="M18 18C18 18 20 12 23 10C23 10 24 15 18 18Z" fill="#B8966A" opacity="0.45"/>
+      </svg>
+      <div class="nav-logo-text">Palm Tree Crew<br>Brand Director Case Study</div>
+    </a>
+  </div>
+
+  <div class="nav-author">Marie Edwards &nbsp;·&nbsp; 2026</div>
+
+  <div class="nav-section-group">
+    <a href="#opening" class="nav-link" data-section="opening">Opening</a>
+  </div>
+
+  <div class="nav-divider"></div>
+
+  <div class="nav-section-group">
+    <span class="nav-link parent">Brand Diagnosis</span>
+    <a href="#diagnosis-today" class="nav-link" data-section="diagnosis-today">What PTC Is Today</a>
+    <a href="#diagnosis-gaps" class="nav-link" data-section="diagnosis-gaps">Strengths &amp; Gaps</a>
+  </div>
+
+  <div class="nav-divider"></div>
+
+  <div class="nav-section-group">
+    <span class="nav-link parent">First 90 Days</span>
+    <a href="#90-framing" class="nav-link" data-section="90-framing">The Honest Framing</a>
+    <a href="#90-phases" class="nav-link" data-section="90-phases">The Four Phases</a>
+  </div>
+
+  <div class="nav-divider"></div>
+
+  <div class="nav-section-group">
+    <span class="nav-link parent">Global Brand Narrative</span>
+    <a href="#narrative-science" class="nav-link" data-section="narrative-science">The Science</a>
+    <a href="#narrative-idea" class="nav-link" data-section="narrative-idea">The Idea &amp; Pillars</a>
+    <a href="#narrative-content" class="nav-link" data-section="narrative-content">Content Ecosystems</a>
+  </div>
+
+  <div class="nav-divider"></div>
+
+  <div class="nav-section-group">
+    <a href="#collab" class="nav-link" data-section="collab">Dream Collaboration</a>
+  </div>
+
+  <div class="nav-divider"></div>
+
+  <div class="nav-section-group">
+    <span class="nav-link parent">Social Media</span>
+    <a href="#social-diagnosis" class="nav-link" data-section="social-diagnosis">Diagnosis &amp; Change One</a>
+    <a href="#social-changes" class="nav-link" data-section="social-changes">Changes Two &amp; Three</a>
+  </div>
+
+  <div class="nav-divider"></div>
+
+  <div class="nav-section-group">
+    <a href="#arrivals" class="nav-link" data-section="arrivals">Palm Tree Arrivals</a>
+    <a href="#discipline" class="nav-link" data-section="discipline">Brand Discipline</a>
+    <a href="#aesthetic" class="nav-link" data-section="aesthetic">Aesthetic Direction</a>
+  </div>
+
+  <div class="nav-divider"></div>
+
+  <div class="nav-section-group">
+    <span class="nav-link parent">$1M Allocation</span>
+    <a href="#alloc-content" class="nav-link" data-section="alloc-content">Content Infrastructure</a>
+    <a href="#alloc-moments" class="nav-link" data-section="alloc-moments">Cultural Moments &amp; Community</a>
+    <a href="#alloc-foundation" class="nav-link" data-section="alloc-foundation">Foundation &amp; Closing</a>
+  </div>
+
+  <div class="nav-divider"></div>
+
+  <div class="nav-section-group">
+    <a href="#appendix" class="nav-link" data-section="appendix">Appendix</a>
+  </div>
+</nav>
+
+<!-- ── MAIN ── -->
+<main>
+
+  <!-- HERO -->
+  <div class="hero" id="hero">
+    <div class="hero-eyebrow">Brand Director Case Study</div>
+    <h1 class="hero-title">Palm Tree Crew</h1>
+    <p class="hero-subtitle">Marie Edwards &nbsp;·&nbsp; 2026</p>
+    <div class="hero-quote">
+      <p>"The cultural moments are already there. The architecture makes the impossible inevitable."</p>
+    </div>
+  </div>
+
+  <!-- OPENING -->
+  <section id="opening">
+    <div class="section-eyebrow">Opening</div>
+    <h2 class="section-headline">PTC is the most compelling lifestyle brand opportunity since Margaritaville.</h2>
+    <ul class="content-list">
+      <li class="bold">Margaritaville proved a feeling — not a product, not a category — could become a billion-dollar ecosystem</li>
+      <li>Palm Tree Crew has done the hardest part: created authentic cultural demand that cannot be manufactured</li>
+      <li>The community has opted in, the gravitational force is real</li>
+      <li class="bold">I'm the person who builds the foundation so the next impossible idea lands somewhere actionable and compounds</li>
+    </ul>
+  </section>
+
+  <!-- BRAND DIAGNOSIS: TODAY -->
+  <section id="diagnosis-today">
+    <div class="section-eyebrow">Brand Diagnosis</div>
+    <h2 class="section-headline">PTC is Margaritaville for a new generation — same architecture, better raw material.</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-label">The Proof of Concept</div>
+        <ul>
+          <li>Jimmy Buffett turned a single feeling into hotels, restaurants, a SiriusXM channel, retirement communities, and a tequila brand</li>
+          <li>All of it sustained by a community who recognized themselves in it and kept showing up for decades</li>
+          <li class="bold">Margaritaville is the proof of concept. PTC is the evolved version.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent gold"></div>
+        <div class="card-label">Why PTC Has Better Raw Material</div>
+        <ul>
+          <li>Audience is younger, more globally mobile, more financially sophisticated, and more identity-driven</li>
+          <li class="bold">PTC's community are builders, investors, tastemakers, and cultural operators — not just fans</li>
+          <li>That overlap of creative ambition and financial fluency in one room is not accidental</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent blue"></div>
+        <div class="card-label">What Cannot Be Manufactured</div>
+        <ul>
+          <li class="bold">Authentic cultural demand — the thing every brand tries to buy and almost none earn</li>
+          <li>The goal: make it commercially available 365 days a year, across every category the community inhabits</li>
+          <li>Independent of any single event or any single person</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND DIAGNOSIS: GAPS -->
+  <section id="diagnosis-gaps">
+    <div class="section-eyebrow">Brand Diagnosis</div>
+    <h2 class="section-headline">The foundation is extraordinary. The infrastructure to hold it needs to be, too.</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-label">Strongest Assets</div>
+        <ul>
+          <li class="bold">Live event product: world-class — Aspen, Hamptons, Hawaii, Art Basel, St. Barths, Grand Prix</li>
+          <li>Founders' networks open doors no marketing budget can</li>
+          <li class="bold">Network density: builders, investors, tastemakers in one room — Margaritaville never had this</li>
+          <li>Access is not brand equity — it's the condition that makes brand building possible</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent gold"></div>
+        <div class="card-label">Critical Gaps</div>
+        <ul>
+          <li class="bold">The Crew is the brand's most powerful idea and it has no infrastructure</li>
+          <li>Community without infrastructure is just an audience. Audiences are rented. Communities are owned.</li>
+          <li>The content gap: brand goes quiet between events — every week of silence is missed momentum</li>
+          <li>In person: world-class. Online: any other festival brand.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent blue"></div>
+        <div class="card-label">What It Should Evolve Toward</div>
+        <ul>
+          <li class="bold">Architecture strong enough that the brand amplifies the founders rather than depending on them</li>
+          <li>Personality attracts the community — architecture is what lets the community find its home when the personality isn't in the room</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIRST 90 DAYS: FRAMING -->
+  <section id="90-framing">
+    <div class="section-eyebrow">First 90 Days</div>
+    <h2 class="section-headline">Everything in this presentation is built from public signals. That's the starting point, not the plan.</h2>
+    <ul class="content-list">
+      <li class="bold">I haven't been inside the organization — and the most dangerous move is executing against assumptions rather than reality</li>
+      <li>The honest answer to the first 90 days: spend them finding out what's actually true</li>
+      <li class="bold">The brand document I'll build won't just guide the work — it will free the people doing it</li>
+      <li>When everyone has the filter, the micro-decisions stop being escalated and the work gets bolder, more confident, and more exponential</li>
+    </ul>
+  </section>
+
+  <!-- FIRST 90 DAYS: PHASES -->
+  <section id="90-phases">
+    <div class="section-eyebrow">First 90 Days</div>
+    <h2 class="section-headline">Listen. Name. Amplify. Build. In that order.</h2>
+
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="phase-number">01</div>
+        <div class="phase-title">Listen Before Naming</div>
+        <ul>
+          <li>Talk to everyone: internal team, partners, venue operators, long-time community members, and people who came once and never came back</li>
+          <li>What does PTC feel like at its best? What feels off? What do people say when we're not in the room?</li>
+          <li>Social listening simultaneously — what does the community say when they don't think the brand is watching?</li>
+          <li><strong>One output only: the truth about what the brand already is</strong></li>
+        </ul>
+      </div>
+      <div class="phase-card">
+        <div class="phase-number">02</div>
+        <div class="phase-title">Build the Brand Document</div>
+        <ul>
+          <li><strong>The decision lever — not guidelines in a folder, but the filter every subsequent decision runs through</strong></li>
+          <li>Content, partnerships, product, licensing, hiring — does this belong in the PTC world or doesn't it?</li>
+          <li>Built with the team, not for them — co-authors create ownership, ownership creates confidence</li>
+          <li>Internal trust, autonomy, and clarity — the team works with excitement instead of hesitation</li>
+        </ul>
+      </div>
+      <div class="phase-card">
+        <div class="phase-number">03</div>
+        <div class="phase-title">Find the Closest Alligator to the Boat</div>
+        <ul>
+          <li><strong>Look at what's already in motion — which existing event, space, or moment can the brand amplify most fully right now?</strong></li>
+          <li>First proof the brand document works as a decision lever</li>
+          <li>Builds internal credibility fast — the team sees brand work isn't slow and invisible</li>
+        </ul>
+      </div>
+      <div class="phase-card">
+        <div class="phase-number">04</div>
+        <div class="phase-title">The Next Step That Earns Its Place</div>
+        <ul>
+          <li>Honest answer: I don't know yet — it emerges from what Phases 1–3 reveal</li>
+          <li><strong>Option A: Community architecture pilot, Miami + New York, padel-anchored</strong></li>
+          <li><strong>Option B: Content operation, always-on editorial presence holding the red thread between events</strong></li>
+          <li>The evidence decides — not this presentation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- NARRATIVE: SCIENCE -->
+  <section id="narrative-science">
+    <div class="section-eyebrow">Global Brand Narrative</div>
+    <h2 class="section-headline">Margaritaville served 2 levels of Maslow's hierarchy. PTC can serve all four simultaneously.</h2>
+
+    <div class="maslow-grid">
+      <div class="maslow-card">
+        <div class="maslow-num">1</div>
+        <div>
+          <div class="maslow-level">Belonging</div>
+          <div class="maslow-desc">The need to be part of something, to find our people</div>
+          <span class="maslow-badge marg">Margaritaville</span>
+          <span class="maslow-badge ptc">PTC</span>
+        </div>
+      </div>
+      <div class="maslow-card">
+        <div class="maslow-num">2</div>
+        <div>
+          <div class="maslow-level">Esteem</div>
+          <div class="maslow-desc">The need to be respected by the people whose respect we want</div>
+          <span class="maslow-badge ptc">PTC</span>
+        </div>
+      </div>
+      <div class="maslow-card">
+        <div class="maslow-num">3</div>
+        <div>
+          <div class="maslow-level">Aesthetic Need</div>
+          <div class="maslow-desc">Craving for beauty, harmony, and meaningful sensory experience</div>
+          <span class="maslow-badge marg">Margaritaville</span>
+          <span class="maslow-badge ptc">PTC</span>
+        </div>
+      </div>
+      <div class="maslow-card">
+        <div class="maslow-num">4</div>
+        <div>
+          <div class="maslow-level">Self-Actualization</div>
+          <div class="maslow-desc">The need to become what we are capable of becoming</div>
+          <span class="maslow-badge ptc">PTC</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <p>We are just humans craving connection. It's science.</p>
+    </div>
+  </section>
+
+  <!-- NARRATIVE: IDEA & PILLARS -->
+  <section id="narrative-idea">
+    <div class="section-eyebrow">Global Brand Narrative</div>
+    <h2 class="section-headline">The Crew shows up to build something, not just experience something. They're not passive. They're participants.</h2>
+
+    <div class="quote-box gold" style="margin-bottom: 32px;">
+      <p>"The Crew doesn't consume culture. They make it."</p>
+    </div>
+
+    <div class="card-full" style="margin-bottom: 20px;">
+      <div class="card-label">The Unifying Idea</div>
+      <ul>
+        <li>Every great lifestyle brand is built on a single idea so specific it naturally excludes the wrong people and magnetically attracts the right ones</li>
+        <li>It promises participation, not just access</li>
+        <li>It opens the full category expansion: a community building culture needs places, products, venues, trips, and investments</li>
+        <li><strong>Emotional territory: active arrival — not escapism, showing up somewhere that matters and leaving more connected than when you arrived</strong></li>
+      </ul>
+    </div>
+
+    <div class="pillar-row">
+      <div class="pillar-card green">
+        <div class="pillar-name">Pillar 01</div>
+        <div class="pillar-card-title">Belonging</div>
+        <p>The foundation. Cannot be manufactured by spending money, only earned through consistency, curation, and genuine investment. Every touchpoint deepens it or dilutes it.</p>
+      </div>
+      <div class="pillar-card blue">
+        <div class="pillar-name">Pillar 02</div>
+        <div class="pillar-card-title">Ambition</div>
+        <p>The fuel. PTC's community brings their ambitions with them — networking, making deals, investing in brands they discover. The energy is elevation, not relaxation.</p>
+      </div>
+      <div class="pillar-card gold-bg">
+        <div class="pillar-name">Pillar 03</div>
+        <div class="pillar-card-title">Aesthetics</div>
+        <p>How the world sees both of those things. The most visible current gap and the most immediately actionable opportunity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NARRATIVE: CONTENT -->
+  <section id="narrative-content">
+    <div class="section-eyebrow">Global Brand Narrative</div>
+    <h2 class="section-headline">Three content territories that run independently of the event calendar.</h2>
+
+    <div class="card-grid" style="margin-bottom: 32px;">
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-label">Belonging</div>
+        <div class="card-title">The Crew in the World</div>
+        <ul>
+          <li>Community made visible to itself — profiles of people building things, not because they're famous but because they're interesting</li>
+          <li>The community recognizes itself in this content, belonging deepens between events</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent gold"></div>
+        <div class="card-label">Ambition</div>
+        <div class="card-title">The Work Being Made</div>
+        <ul>
+          <li>Editorial voice on music, culture, and entrepreneurship — the people behind the scenes, the decisions being made</li>
+          <li>Treats the PTC world as worthy of serious, considered documentation — not recap content</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent blue"></div>
+        <div class="card-label">Aesthetics</div>
+        <div class="card-title">The World It Looks Like</div>
+        <ul>
+          <li>The visual universe between events — specific moments, details, and places that make the aesthetic feel real and continuous</li>
+          <li>A friend with the best access in the world sharing it generously — not a brand broadcasting highlights</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-eyebrow" style="margin-bottom: 12px;">Three Cultural Moments to Own Annually</div>
+    <div class="moment-row">
+      <div class="moment-card">
+        <div class="moment-timing">February · LA</div>
+        <div class="moment-title">Grammy Week</div>
+        <div class="moment-desc">The most glaring gap for a music lifestyle brand. A PTC Grammy Week event would be the most direct expression of PTC's core identity — an easy story to tell media, sponsors, and the music industry.</div>
+      </div>
+      <div class="moment-card">
+        <div class="moment-timing">Late August · New York</div>
+        <div class="moment-title">US Open Week</div>
+        <div class="moment-desc">Tennis has crossed into PTC's cultural world. Sinner, Alcaraz, Gauff, and Raducanu now occupy the same cultural space as musicians and fashion icons — the same affluent, globally mobile, aesthetically driven audience.</div>
+      </div>
+      <div class="moment-card">
+        <div class="moment-timing">Year 1 Candidate · Miami</div>
+        <div class="moment-title">Miami Music Week</div>
+        <div class="moment-desc">PTC already has a permanent venue in Miami and the city is the US padel hub. Miami Music Week is the world's largest electronic music gathering — 100,000+ attendees — and the cultural moment most directly aligned with PTC's music DNA. First-mover space is still open.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DREAM COLLAB -->
+  <section id="collab">
+    <div class="section-eyebrow">Dream Collaboration</div>
+    <h2 class="section-headline">PTC × Belmond — the same community, the same markets, the same moment in the world.</h2>
+
+    <div class="card-grid" style="margin-bottom: 24px;">
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-label">Why Belmond / LVMH</div>
+        <ul>
+          <li>78 properties in 32 countries — "slow luxury" philosophy, experiential revenue now 38% of total</li>
+          <li>Explicitly targeting younger, experience-driven clientele — the gap PTC fills precisely</li>
+          <li class="bold">The geographic overlap is not a coincidence — Venice, Portofino, Sardinia, St. Barths and Hamptons, Sardinia, St. Barths, Grand Prix</li>
+          <li>These are not parallel worlds — they are the same world at different moments of the same journey</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent gold"></div>
+        <div class="card-label">Why LVMH Needs PTC</div>
+        <ul>
+          <li>Pharrell Williams boosted Louis Vuitton menswear 20%+ — but Pharrell is an individual, a single point of credibility they had to pay for</li>
+          <li class="bold">PTC is a community — self-sustaining, self-replicating, already in the markets Belmond is targeting</li>
+          <li>Communities compound. Individual relationships don't.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year"><span>Year</span>1</div>
+        <div>
+          <div class="timeline-content-title">Hotel Cipriani Venice — Venice Film Festival</div>
+          <div class="timeline-content-desc">200 people. The most coveted invitation of the week — not because of scale, but because of specificity.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year"><span>Year</span>2</div>
+        <div>
+          <div class="timeline-content-title">Three Belmond Properties</div>
+          <div class="timeline-content-desc">The series has a name. The collaboration has its own identity within both brands.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year"><span>Year</span>3</div>
+        <div>
+          <div class="timeline-content-title">Venice Simplon-Orient-Express</div>
+          <div class="timeline-content-desc">A journey through Europe with Crew members, artists, and cultural figures — the kind of experience you earn by being in the room, not one you can buy.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <p>"Asset-light licensing model — Belmond brings the infrastructure, PTC brings the community and identity layer."</p>
+    </div>
+  </section>
+
+  <!-- SOCIAL: DIAGNOSIS -->
+  <section id="social-diagnosis">
+    <div class="section-eyebrow">Social Media &amp; Visual Presence</div>
+    <h2 class="section-headline">Event marketing, not world building. Beautiful posts, no portable brand signature.</h2>
+
+    <div class="card-full" style="margin-bottom: 24px;">
+      <div class="card-label">The Diagnosis</div>
+      <ul>
+        <li>Looked at the feed the way a potential member would — someone who hasn't been to a festival, spending two minutes deciding if this world is for them</li>
+        <li>Photography is beautiful, production value is real — none of that is the problem</li>
+        <li><strong>The feed announces, recaps, and promotes — nothing makes the brand's world feel real on a Thursday in January with no event coming</strong></li>
+        <li>Brand goes quiet between events when it should be amplifying</li>
+      </ul>
+    </div>
+
+    <div class="change-list">
+      <div class="change-item">
+        <div class="change-num">01</div>
+        <div>
+          <div class="change-title">Stop Posting Events. Start Building the World.</div>
+          <ul>
+            <li>A content framework that runs independently of the event calendar — three recurring territories every single week</li>
+            <li>Day 1: profile someone in the Crew, not because they're famous, but because they're interesting and building something</li>
+            <li>Day 4: capture the specific visual texture of the PTC world — a detail, a place, a moment</li>
+            <li>Day 7: connect PTC to a cultural moment or partnership that answers the "why"</li>
+            <li><strong>Impact: 365-day presence, better audience quality, brand stops renting attention and starts owning it</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL: CHANGES -->
+  <section id="social-changes">
+    <div class="section-eyebrow">Social Media &amp; Visual Presence</div>
+    <h2 class="section-headline">Find the visual feeling. Give the audience somewhere to go.</h2>
+
+    <div class="change-list">
+      <div class="change-item">
+        <div class="change-num">02</div>
+        <div>
+          <div class="change-title">Visual Feeling, Not Visual System</div>
+          <ul>
+            <li><strong>The goal is not a recognizable grid — a grid too coherent becomes predictable, and predictable is unforgivable for this community</strong></li>
+            <li>Study the brands whose feeds stop people mid-scroll — not festival brands, but brands whose posts create genuine desire</li>
+            <li>Show what happens before the stage is built, the artist nobody knows yet, the 20 minutes after when people are still feeling it</li>
+            <li>People love three things: behind the scenes, finding out first, feeling part of a conversation that matters — we have all three</li>
+            <li>Visual identity follows the content — when the content is alive enough, coherence emerges naturally</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="change-item">
+        <div class="change-num">03</div>
+        <div>
+          <div class="change-title">Give the Audience an Audience</div>
+          <ul>
+            <li><strong>Right now it's broadcast — the brand posts, the audience watches, no participation is invited</strong></li>
+            <li>The brand starts talking back — every meaningful comment gets a real response in the brand's voice</li>
+            <li>Participatory moments — genuine invitations into the world, not engagement bait</li>
+            <li>Every genuine response moves someone one step closer to being part of the Crew</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-box gold">
+      <p>"I want to be part of whatever that is."</p>
+    </div>
+  </section>
+
+  <!-- PALM TREE ARRIVALS -->
+  <section id="arrivals">
+    <div class="section-eyebrow">Palm Tree Cultural Moment</div>
+    <h2 class="section-headline">Grammy Week, LA. February. Annual. PTC × Belmond. The most specific invitation of music's most important week.</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-label">The Gap</div>
+        <ul>
+          <li class="bold">No premium lifestyle brand owns Grammy week — and PTC is co-founded by a Grammy-nominated artist</li>
+          <li>Every major label hosts dinners, every streaming platform hosts parties — none operate at the intersection of music, culture, entrepreneurship, and community</li>
+          <li>A music lifestyle brand that doesn't own Grammy week is making an unintentional identity statement</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent gold"></div>
+        <div class="card-label">Why "Arrivals"</div>
+        <ul>
+          <li class="bold">Active arrival — not a party you attend, a place you arrive with intention, with your ambitions, with the people you're building alongside</li>
+          <li>Direct counterpoint to Margaritaville: escape vs. arrival — same warmth and belonging, opposite direction of travel</li>
+          <li>It compounds — Palm Tree Arrivals 2026, 2027, 2028 — each year the name accumulates cultural meaning</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent blue"></div>
+        <div class="card-label">The Format</div>
+        <ul>
+          <li>Afternoon: cultural programming series in a Belmond-curated space — intimate conversations between builders, not panels</li>
+          <li>Culminates in everyone watching the Grammy ceremony together — belonging crystallizes in that shared moment</li>
+          <li class="bold">Evening: performance and dinner — curated, invite-only, no ticket sales — invited because you belong in the room</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND DISCIPLINE -->
+  <section id="discipline">
+    <div class="section-eyebrow">Brand Discipline</div>
+    <h2 class="section-headline">Stop letting the founders' personal brands carry the weight the brand system should carry.</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-label">What I'm Naming</div>
+        <ul>
+          <li>This names something that is both PTC's greatest asset and its most significant structural vulnerability</li>
+          <li class="bold">Right now the founders are doing a job an architecturally sound brand system should be doing</li>
+          <li>I've worked through this same challenge with Marie Kondo and Martha Stewart — the founder's personality was doing work the brand system needed to learn to do on its own</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent gold"></div>
+        <div class="card-label">The Margaritaville Lesson</div>
+        <ul>
+          <li>When Buffett died, the brand survived because they spent decades building architecture around the feeling he embodied</li>
+          <li class="bold">PTC has active, culturally relevant founders — an extraordinary asset, and a window that's open right now</li>
+          <li>Build while the raw material is at its best</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent blue"></div>
+        <div class="card-label">The Replacement</div>
+        <ul>
+          <li class="bold">A brand system so clearly an expression of the founders' taste that it makes their involvement more powerful, not less necessary</li>
+          <li>Built with them, not for them — co-authored so it travels without them being in the room</li>
+          <li>Specific enough that someone who's never met Kygo or Myles can make a brand decision they would have made themselves</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote-box" style="margin-top: 28px;">
+      <p>"Their personality amplifies the brand. The brand no longer depends on their personality."</p>
+    </div>
+  </section>
+
+  <!-- AESTHETIC DIRECTION -->
+  <section id="aesthetic">
+    <div class="section-eyebrow">Aesthetic Direction</div>
+    <h2 class="section-headline">Six brands. Each one solved a specific aesthetic problem PTC needs to solve.</h2>
+    <p style="font-size: 15px; color: var(--gray); margin-bottom: 32px; max-width: 600px;">The goal is not to look like any of them — but to build something that makes the right person feel the way these brands make their community feel.</p>
+
+    <div class="brand-ref-grid">
+      <div class="brand-ref">
+        <div class="brand-ref-accent" style="background: var(--green);"></div>
+        <div class="brand-ref-name">Loro Piana</div>
+        <div class="brand-ref-role">The Material Standard</div>
+        <div class="brand-ref-desc">No logos, no campaigns. Material so specific and extraordinary that the people who know, know. Premium through quality, not noise.</div>
+        <span class="brand-ref-stat">€1.6B revenue · EBITDA doubled in 2024</span>
+      </div>
+      <div class="brand-ref">
+        <div class="brand-ref-accent" style="background: var(--black);"></div>
+        <div class="brand-ref-name">Highsnobiety</div>
+        <div class="brand-ref-role">The Editorial Voice</div>
+        <div class="brand-ref-desc">Culture documented from the inside, not observed from the outside. Turning stories into products and products into stories.</div>
+        <span class="brand-ref-stat">Acquired by Zalando for cultural credibility</span>
+      </div>
+      <div class="brand-ref">
+        <div class="brand-ref-accent" style="background: var(--blue-dark);"></div>
+        <div class="brand-ref-name">Aman</div>
+        <div class="brand-ref-role">The Spatial Philosophy</div>
+        <div class="brand-ref-desc">Every property radically different, every one instantly, unmistakably Aman. The consistency is philosophical — every physical detail is a brand decision.</div>
+        <span class="brand-ref-stat">92% Aman Club renewal rate</span>
+      </div>
+      <div class="brand-ref">
+        <div class="brand-ref-accent" style="background: var(--gold);"></div>
+        <div class="brand-ref-name">Acne Studios</div>
+        <div class="brand-ref-role">The Typographic Identity</div>
+        <div class="brand-ref-desc">Specific, restrained, ownable for 25 years without becoming boring. Built to $285M without traditional advertising.</div>
+        <span class="brand-ref-stat">Net income +135% in 2024</span>
+      </div>
+      <div class="brand-ref">
+        <div class="brand-ref-accent" style="background: #E8563A;"></div>
+        <div class="brand-ref-name">i-D Magazine</div>
+        <div class="brand-ref-role">The Community Photography</div>
+        <div class="brand-ref-desc">Subjects seen, celebrated, close — found before the world decided they mattered. The discovery is the editorial act.</div>
+        <span class="brand-ref-stat">Highest-ever print revenue on return in 2025</span>
+      </div>
+      <div class="brand-ref">
+        <div class="brand-ref-accent" style="background: #8B7355;"></div>
+        <div class="brand-ref-name">The Ned</div>
+        <div class="brand-ref-role">The Hospitality Architecture</div>
+        <div class="brand-ref-desc">Warm, multi-layered, genuinely social — different things happening simultaneously, all feeling like the same world.</div>
+        <span class="brand-ref-stat">Closest reference to Palm Tree Club Miami</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALLOCATION: CONTENT -->
+  <section id="alloc-content">
+    <div class="section-eyebrow">$1M Brand Allocation</div>
+    <h2 class="section-headline">Content is king. But the content has to be in service to the people.</h2>
+
+    <div class="card-full" style="margin-bottom: 28px;">
+      <div class="card-label">The Theory</div>
+      <ul>
+        <li>Content in service of the brand: promotes, announces, recaps</li>
+        <li><strong>Content in service of people: informs, includes, recognizes — makes the community visible to itself</strong></li>
+        <li>The best content doesn't feel like a brand talking — it feels like a friend with extraordinary access who shares generously</li>
+        <li><strong>One through line: a sequenced path toward the LVMH partnership that makes the Margaritaville thesis real at scale</strong></li>
+      </ul>
+    </div>
+
+    <div class="alloc-grid">
+      <div class="alloc-card" data-pct="35%">
+        <div class="alloc-pct">35%</div>
+        <div class="alloc-title">Content Infrastructure &amp; Production</div>
+        <ul>
+          <li>The largest single investment — the engine everything else feeds into</li>
+          <li>Full editorial operation + curated creator network who are themselves part of the world</li>
+          <li><strong>People who shoot from the inside because they belong there — not hired crews on a day rate</strong></li>
+          <li>The brand never goes quiet — year-round presence, every month has a moment</li>
+        </ul>
+      </div>
+      <div style="background: var(--green-pale); border-radius: 12px; padding: 28px; display: flex; align-items: center; justify-content: center;">
+        <div style="text-align: center;">
+          <div style="font-family: 'Trade Gothic Bold', sans-serif; font-size: 52px; color: var(--green); line-height: 1; margin-bottom: 8px;">365</div>
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); opacity: 0.7;">Days of Presence</div>
+          <div style="font-size: 13px; color: var(--gray); margin-top: 8px; line-height: 1.4;">The brand never<br>goes quiet</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALLOCATION: MOMENTS -->
+  <section id="alloc-moments">
+    <div class="section-eyebrow">$1M Brand Allocation</div>
+    <h2 class="section-headline">The investments that generate cultural signal, community depth, and LVMH evidence simultaneously.</h2>
+
+    <div class="alloc-grid">
+      <div class="alloc-card" data-pct="30%">
+        <div class="alloc-pct">30%</div>
+        <div class="alloc-title">Cultural Moments</div>
+        <ul>
+          <li><strong>Palm Tree Arrivals — Grammy Week, LA: the public introduction of the rebuilt brand</strong></li>
+          <li>Padel court dinner series: Miami, New York, Aspen, Sardinia</li>
+          <li><strong>The Palm Tree Table: one aspiring local chef per market, found by the community before anyone else does</strong></li>
+          <li>The community finds them — not an algorithm, not a publicist</li>
+          <li>Sardinia dinner: same market, same season as Belmond's Romazzino — the partnership conversation becomes obvious</li>
+        </ul>
+      </div>
+      <div class="alloc-card" data-pct="25%">
+        <div class="alloc-pct">25%</div>
+        <div class="alloc-title">Community &amp; Padel</div>
+        <ul>
+          <li><strong>Fastest growing sport in the world — 30M players globally, 250% US growth since 2022</strong></li>
+          <li>92% return rate after first session — highest of any racquet sport</li>
+          <li>Miami is the US padel hub — where PTC already has a permanent venue</li>
+          <li><strong>A 2–3 year breakout window, not a 10-year runway — PTC shows up before it's obvious</strong></li>
+          <li>Sport does the belonging work: you cannot play alone</li>
+          <li>Year 2: extends to Sardinia — the Belmond overlap becomes undeniable</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stat-strip">
+      <div class="stat-cell">
+        <span class="stat-number">30M</span>
+        <div class="stat-label">Padel players globally</div>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-number">250%</span>
+        <div class="stat-label">US player growth since 2022</div>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-number">92%</span>
+        <div class="stat-label">Return rate after first session</div>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-number">2–3yr</span>
+        <div class="stat-label">US breakout window</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALLOCATION: FOUNDATION -->
+  <section id="alloc-foundation">
+    <div class="section-eyebrow">$1M Brand Allocation</div>
+    <h2 class="section-headline">The thinking infrastructure that makes every other dollar smarter.</h2>
+
+    <div class="alloc-grid" style="margin-bottom: 0;">
+      <div class="alloc-card" data-pct="10%">
+        <div class="alloc-pct">10%</div>
+        <div class="alloc-title">Foundation &amp; Team Intelligence</div>
+        <ul>
+          <li>Lean brand system in 60 days — minimum viable foundation that gives the content operation a coherent visual language</li>
+          <li><strong>Global cultural intelligence program: immersion trips, monthly briefing, community access</strong></li>
+          <li>A team that understands the world their community inhabits makes better decisions across every other category</li>
+        </ul>
+      </div>
+      <div style="background: var(--blue); border-radius: 12px; padding: 28px; display: flex; align-items: center;">
+        <div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 8px;">The Sequence</div>
+          <div style="font-family: 'Trade Gothic Bold', sans-serif; font-size: 18px; color: var(--green); line-height: 1.4;">Content → Moments → Community → Foundation</div>
+          <div style="font-size: 13px; color: var(--green); opacity: 0.7; margin-top: 8px; line-height: 1.5;">Every dollar pointed toward the LVMH partnership that makes the Margaritaville thesis real at scale.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing-section" id="closing">
+    <div class="section-eyebrow">Closing</div>
+    <h2 class="section-headline">Everything shown here was built from a website and a job description.</h2>
+    <p class="closing-body">That's the point. The best brand work starts with curiosity — asking the right questions before claiming to have the answers, treating every constraint as an opportunity.</p>
+    <p class="closing-body bold">I look forward to showing you what's possible once I'm actually in the room.</p>
+    <p class="closing-body" style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.4);">Thank you for your time — please reach out with any questions.</p>
+  </section>
+
+  <!-- APPENDIX -->
+  <section class="appendix-section" id="appendix">
+    <div class="section-eyebrow">Appendix</div>
+    <h2 class="section-headline" style="margin-bottom: 8px;">Research Reference</h2>
+    <p style="font-size: 14px; color: var(--gray); margin-bottom: 56px; font-style: italic;">Brand deep-dives and strategic context. Not for presentation — for reference.</p>
+
+    <div class="appendix-entry">
+      <div class="appendix-brand">Loro Piana</div>
+      <div class="appendix-role">The Material Standard</div>
+      <p class="appendix-body">Founded in 1924 in Quarona, Italy, Loro Piana spent a century sourcing the world's rarest natural fibers — vicuña, baby cashmere, Storm System wool — and turning them into garments so extraordinary that the product itself is the entire argument. No celebrity campaigns. No logo saturation. The brand generated an estimated €1.6 billion in revenue in 2024 with EBITDA margins that doubled year over year, achieved almost entirely through quality and word of mouth. CEO Damien Bertrand pushed back on the "quiet luxury" label explicitly: "Loro Piana existed before quiet luxury and will exist afterwards. There are a lot of things about the brand that are not quiet at all." The logo is incidental. The fabric is the identity. If you know, you know. If you don't, you're not the audience.</p>
+      <div class="appendix-extract">
+        <div class="appendix-extract-label">What PTC Extracts</div>
+        <p>Premium does not require noise. The brand's quality — the specificity of the event experience, the precision of the curation, the caliber of the people in the room — should be legible without annotation. The right person walks into a PTC event and knows immediately they are somewhere that required serious thought and serious taste.</p>
+      </div>
+    </div>
+
+    <div class="appendix-entry">
+      <div class="appendix-brand">Highsnobiety</div>
+      <div class="appendix-role">The Editorial Voice</div>
+      <p class="appendix-body">Founded in Berlin in 2005 as a personal passion blog about streetwear culture, Highsnobiety grew into one of the most commercially influential fashion and culture media companies in the world, ultimately acquired by Zalando for its ability to "turn stories into products and products into stories." Their managing editor described their reader as "someone who likes to be informed informally." Their New Luxury research found that 71% of their audience believes the story around a collaboration is just as important as the product itself. Cultural credibility came before commercial credibility — and the commercial credibility followed.</p>
+      <div class="appendix-extract">
+        <div class="appendix-extract-label">What PTC Extracts</div>
+        <p>The content infrastructure argument in the $1M allocation is the Highsnobiety model applied to PTC's world. Not a social media operation — an editorial operation with a defined cultural point of view. The distinction is the whole point.</p>
+      </div>
+    </div>
+
+    <div class="appendix-entry">
+      <div class="appendix-brand">Aman</div>
+      <div class="appendix-role">The Spatial Philosophy</div>
+      <p class="appendix-body">Founded in 1988 when Adrian Zecha built a private retreat on a headland in Phuket too beautiful to keep to himself, Aman introduced a philosophy that has never been successfully replicated: intimacy as the primary luxury. While every other five-star hotel competed to add more rooms and more amenities, Aman limited each property to under 50 rooms, hired staff for genuine care rather than scripted service, and chose locations for cultural and historical significance. The result is the Amanjunkie phenomenon — guests who visit a dozen or more properties, plan annual calendars around new openings, and maintain loyalty with no parallel in the hotel industry. The Aman Club, launched in 2023, has a 92% renewal rate. Repeat guests account for 60% of all bookings.</p>
+      <div class="appendix-extract">
+        <div class="appendix-extract-label">What PTC Extracts</div>
+        <p>Every physical decision is a brand decision. The height of a ceiling, the direction a venue faces, the sound of the space when it's quiet — these are not operational details. When PTC builds or licenses a physical space, the spatial philosophy should communicate the world before a single word is spoken.</p>
+      </div>
+    </div>
+
+    <div class="appendix-entry">
+      <div class="appendix-brand">Acne Studios</div>
+      <div class="appendix-role">The Typographic Identity</div>
+      <p class="appendix-body">Founded in Stockholm in 1996 as something between a creative collective and a fashion experiment, Acne Studios made branding its primary point of difference from the beginning. The iconic millennial pink shopping bag, chosen because "people considered pink to be ugly," became a cultural artifact used by people who had never purchased anything from the brand. The brand avoided traditional advertising for its first two decades, building to $285M in annual revenue through a biannual print magazine featuring David Lynch and Tilda Swinton, stores in off-beat locations, and collaborations chosen for cultural alignment. Net income surged 135% in 2024. When their CEO admitted "most people barely know that we exist," he was describing a deliberate strategy — depth before breadth.</p>
+      <div class="appendix-extract">
+        <div class="appendix-extract-label">What PTC Extracts</div>
+        <p>A typographic signature and visual language so specific that people recognize the brand before they read the name is a commercial asset worth building deliberately. PTC needs its equivalent — not a logo, but a visual language so ownable that encountering it in any context tells you immediately what world you're in.</p>
+      </div>
+    </div>
+
+    <div class="appendix-entry">
+      <div class="appendix-brand">i-D Magazine</div>
+      <div class="appendix-role">The Community Photography</div>
+      <p class="appendix-body">Founded in London in 1980 by Terry Jones as a hand-stapled fanzine, i-D introduced the Straight-Up — a full-length portrait of a street-cast subject accompanied by a brief Q&A about their life. The mechanism: i-D finds people before other publications find them, treats them as already significant, and in doing so helps make them significant. The discovery is the editorial act. The photographers who learned their craft at i-D include Wolfgang Tillmans, Mario Testino, and Nick Knight. The magazine returned in Spring 2025 under Bedford Media and achieved its highest-ever print revenue on the first issue, featuring an 18-year-old discovered through an open casting call.</p>
+      <div class="appendix-extract">
+        <div class="appendix-extract-label">What PTC Extracts</div>
+        <p>The way PTC photographs its community should make every subject feel the way i-D makes its subjects feel — seen, celebrated, close. Not polished event photography shot from a distance. The Palm Tree Table chef discovered in Sardinia. The Crew member before the padel match. The i-D frame: this person matters, and we found them first.</p>
+      </div>
+    </div>
+
+    <div class="appendix-entry">
+      <div class="appendix-brand">The Ned</div>
+      <div class="appendix-role">The Hospitality Architecture</div>
+      <p class="appendix-body">The Ned opened in London in 2017 in the former Midland Bank building — a Grade I listed Edwin Lutyens-designed banking hall. Conceived by Nick Jones (founder of Soho House), it transformed 11 floors into a hotel and members club with 250 bedrooms, 10 restaurants, 17 bars, two pools, and a curated art collection. What is remarkable is not the scale but that every space within the building feels like a natural expression of a single world. The membership (£4,000/year, referral required) operates on the principle that the club exists for "diverse professionals to meet, work and have a good time." Properties have since opened in New York, Washington DC, and Doha.</p>
+      <div class="appendix-extract">
+        <div class="appendix-extract-label">What PTC Extracts</div>
+        <p>The Ned is the closest existing reference to what Palm Tree Club Miami should eventually feel like. Not Soho House (too generic through scale), not Aman (prioritizes retreat over social energy). The Ned at its best: different things happening simultaneously — all feeling like the same world. That multi-layered quality is what PTC designs toward in its permanent venues.</p>
+      </div>
+    </div>
+
+    <div class="appendix-entry">
+      <div class="appendix-brand">Soho House</div>
+      <div class="appendix-role">The Membership Architecture — and the Cautionary Tale</div>
+      <p class="appendix-body">Soho House was founded in London in 1995 by Nick Jones as a private members club for people in the creative industries. The founding thesis: build a room for the right people and let the room do the work. By 2025, Soho House operated 40+ properties globally across multiple membership tiers, a co-working concept, a spa brand, and a product line. The model proved that a community membership brand could expand into hospitality, retail, and lifestyle without losing its identity — as long as the curation standards held. The cautionary tale: Soho House's IPO in 2021 and subsequent financial pressure led to membership expansion that diluted the original curation. The rooms began to feel less like the right people and more like everyone who could afford the annual fee.</p>
+      <div class="appendix-extract">
+        <div class="appendix-extract-label">What PTC Extracts</div>
+        <p>The tiered membership architecture is the direct structural model for the Crew. The Soho House failure mode is the specific thing PTC must design protections against from day one. Community membership brands don't die from lack of demand. They die from losing the curation that made the demand real.</p>
+      </div>
+    </div>
+
+    <div class="appendix-entry">
+      <div class="appendix-brand">Red Bull Media House</div>
+      <div class="appendix-role">Content as Brand Infrastructure</div>
+      <p class="appendix-body">Red Bull's transformation from energy drink to cultural institution is the most studied case study in brand-as-publisher. Red Bull Media House produces Red Bull TV, the Red Bulletin magazine, and content across action sports, music, gaming, and culture — generating more cultural credibility per dollar than any advertising budget could purchase. The brand's genius: laddered pathways from local to global. Community engagement begins with grassroots activations and local competitions, then creates aspirational escalations toward global events. A person who watched a local Red Bull qualifier feels differently about Red Bull Rampage than someone who just saw an ad. That ladder is exactly what PTC is missing.</p>
+      <div class="appendix-extract">
+        <div class="appendix-extract-label">What PTC Extracts</div>
+        <p>The 35% content infrastructure investment is the Red Bull Media House model at PTC's current scale. Not sponsor the culture — document it, own it, compound it. The padel community pilot is the first rung of the PTC ladder — connecting the everyday community moment to the headline event with something that makes both more meaningful.</p>
+      </div>
+    </div>
+
+    <div class="appendix-entry">
+      <div class="appendix-brand">Supreme</div>
+      <div class="appendix-role">The Access Architecture</div>
+      <p class="appendix-body">Supreme was founded in 1994 by James Jebbia on Lafayette Street in Manhattan as a store for New York's skate community. The founding community was hyperlocal and self-selecting — neighborhood kids, skaters, and local artists who became the store's staff and customers before they became its brand advocates. The mechanism Supreme perfected is drop culture: new products released weekly in strictly limited quantities, never restocked. The scarcity is deliberate and structural. The resale market that emerges is not a problem to manage but a free marketing engine. Items selling at a 57% average premium on StockX are evidence that the community values the brand more than the retail price can express. Supreme generated $538M in revenue in fiscal 2024 from just 17 stores globally — an extraordinary revenue-per-door figure that only scarcity and cultural demand can produce. VF Corporation acquired Supreme for $2.1B in 2020 and sold it to EssilorLuxottica for $1.5B in 2024 — the decline reflecting the market's skepticism about whether corporate ownership could preserve the cultural credibility the brand's value depends on.</p>
+      <div class="appendix-extract">
+        <div class="appendix-extract-label">What PTC Extracts</div>
+        <p>Supreme's most instructive contribution is the underlying principle — that access architecture is a brand decision. The way PTC structures who gets invited to Palm Tree Arrivals, who gets Crew membership, who receives early access to new markets is not an operational question. It is the most powerful brand statement PTC makes continuously. The community that forms around genuine scarcity and genuine curation is qualitatively different from the one that forms around open access.</p>
+      </div>
+    </div>
+
+    <div class="appendix-entry">
+      <div class="appendix-brand">Ennismore</div>
+      <div class="appendix-role">The Lifestyle Hospitality Collective</div>
+      <p class="appendix-body">Ennismore was founded in 2011 by Sharan Pasricha before entering a joint venture with Accor in 2021, creating an autonomous entity within the world's sixth-largest hospitality company. Ennismore today operates 16 brands across 184 hotels in 40 countries with 140 properties in the pipeline. The brand architecture organizes around three pillars: the Lifestyle Collective (The Hoxton, Mama Shelter, 25hours Hotels, Mondrian, SLS), Immersive Resorts (Rixos), and Iconic Venues (Paris Society). Ennismore reported 17.6% net unit growth and €170M EBITDA in 2024. Its most strategically interesting innovation is Dis-loyalty — a paid membership program ($18/month) that inverts the conventional hotel loyalty model entirely, rewarding members for going somewhere new rather than returning to the same property. "We don't reward you for how often you stay with us. We reward you for being disloyal." Members book longer stays, further in advance, with a higher average booking value. Most recoup the annual fee in a single stay. Accor began evaluating a potential IPO for Ennismore in late 2024.</p>
+      <div class="appendix-extract">
+        <div class="appendix-extract-label">What PTC Extracts</div>
+        <p>Ennismore is the single most directly instructive structural reference for PTC's long-term architecture. Not aesthetically — but because Ennismore solved the same fundamental problem PTC will face at scale: how do you maintain cultural credibility and founder-built identity while expanding globally through an institutional ownership structure? The answer: keep the founders in the room, keep the creative in-house, build the operational infrastructure to scale around the creative core. The Dis-loyalty model is also directly relevant — the hospitality industry's most sophisticated proof of concept for a community membership program that rewards exploration over accumulation.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+  // Sticky nav active state
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-link[data-section]');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('data-section') === id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, {
+    rootMargin: '-20% 0px -70% 0px',
+    threshold: 0
+  });
+
+  sections.forEach(section => observer.observe(section));
+
+  // Smooth scroll with offset for fixed nav
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = document.getElementById(link.getAttribute('data-section'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
